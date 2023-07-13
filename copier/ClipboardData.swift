@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+class ClipboardData: ObservableObject {
+	static let sharedInstance = ClipboardData()
+	@Published var copiedText = [String]()
+}

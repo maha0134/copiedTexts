@@ -11,6 +11,8 @@
 		4A2210062A5FEC9D0025A20D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2210052A5FEC9D0025A20D /* ContentView.swift */; };
 		4A2210082A5FEC9F0025A20D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2210072A5FEC9F0025A20D /* Assets.xcassets */; };
 		4A22100B2A5FEC9F0025A20D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A22100A2A5FEC9F0025A20D /* Preview Assets.xcassets */; };
+		4A2210122A60103F0025A20D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2210112A60103F0025A20D /* AppDelegate.swift */; };
+		4A2210142A6011360025A20D /* ClipboardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2210132A6011360025A20D /* ClipboardData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		4A2210052A5FEC9D0025A20D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4A2210072A5FEC9F0025A20D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A22100A2A5FEC9F0025A20D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4A2210112A60103F0025A20D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A2210132A6011360025A20D /* ClipboardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardData.swift; sourceTree = "<group>"; };
+		4A2210152A6026860025A20D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +56,11 @@
 		4A2210022A5FEC9D0025A20D /* copier */ = {
 			isa = PBXGroup;
 			children = (
+				4A2210152A6026860025A20D /* Info.plist */,
 				4A2210032A5FEC9D0025A20D /* copierApp.swift */,
 				4A2210052A5FEC9D0025A20D /* ContentView.swift */,
+				4A2210112A60103F0025A20D /* AppDelegate.swift */,
+				4A2210132A6011360025A20D /* ClipboardData.swift */,
 				4A2210072A5FEC9F0025A20D /* Assets.xcassets */,
 				4A2210092A5FEC9F0025A20D /* Preview Content */,
 			);
@@ -137,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A2210142A6011360025A20D /* ClipboardData.swift in Sources */,
+				4A2210122A60103F0025A20D /* AppDelegate.swift in Sources */,
 				4A2210062A5FEC9D0025A20D /* ContentView.swift in Sources */,
 				4A2210042A5FEC9D0025A20D /* copierApp.swift in Sources */,
 			);
@@ -270,6 +280,7 @@
 				DEVELOPMENT_TEAM = 3A9B57WGTQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = copier/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +310,7 @@
 				DEVELOPMENT_TEAM = 3A9B57WGTQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = copier/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
