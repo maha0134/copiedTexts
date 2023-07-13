@@ -15,21 +15,27 @@ struct ContentView: View {
 	
     var body: some View {
         ScrollView {
+			
 			Text("Copied Texts")
 				.font(.title)
 				.padding(15)
+			
 			Text("This app listens to changes to the clipboard")
+			
 			TextField(text: $text) {
 				Text("Type text here to copy")
 			}
 			.autocorrectionDisabled()
+			.textInputAutocapitalization(.never)
 			.padding(7.5)
 			.frame(width: 200)
 			.border(.black)
-			Text("Copied texts show up here")
+			
+			Text("Copied texts show up below:")
 				.padding()
+			
 			if !copiedStrings.isEmpty {
-				List(copiedStrings, id: \.self) { copiedString in
+				ForEach(copiedStrings, id: \.self) { copiedString in
 					Text(copiedString)
 				}
 			} else {
@@ -38,6 +44,7 @@ struct ContentView: View {
 			}
         }
         .padding()
+		
 		.onAppear {
 			NotificationCenter.default.addObserver(forName: UIPasteboard.changedNotification, object: nil, queue: nil) { _ in
 				updateClipboard()
@@ -56,10 +63,10 @@ struct ContentView_Previews: PreviewProvider {
 extension ContentView {
 	func updateClipboard() {
 		if let copiedText = UIPasteboard.general.string {
-			if !copiedStrings.contains(copiedText) {
+			//Allow repetion but not subsequent copying
+			if copiedStrings.last != copiedText {
 				copiedStrings.append(copiedText)
 			}
-			
 		}
 	}
 }
